@@ -29,6 +29,8 @@ archive = ["https://data.commoncrawl.org/crawl-data/CC-MAIN-2020-05/warc.paths.g
 ## List of crawls from January 2020 to December 2020
 
 for file_name in archive:
+    if len(sys.argv) > 1:
+        file_name = sys.argv[1]
     stream = None
     if file_name.startswith("http://") or file_name.startswith("https://"):
         stream = requests.get(file_name, stream=True).raw
