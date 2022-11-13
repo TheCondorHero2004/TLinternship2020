@@ -1,5 +1,5 @@
 ## Jun Wang TL Coding Exercise 2022/11/12
-
+%pip install warcio
 from warcio.archiveiterator import ArchiveIterator
 import requests
 import sys
